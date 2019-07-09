@@ -1,0 +1,15 @@
+@import 'bootstrap.scss';
+
+.card-header {
+  height: 50px;
+
+  @include media-breakpoint-up(md) {
+    height: 100px;
+  }
+}
+
+.card-body {
+  .avatar {
+    margin-top: -2em;
+  }
+}

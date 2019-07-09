@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiBaseUrl: {
+    placeholder: 'https://jsonplaceholder.typicode.com',
+    maps: 'https://www.google.com/maps/search'
+  }
 };
 
 /*

@@ -1,0 +1,33 @@
+// Bootstrap
+@import 'bootstrap.scss';
+
+// Project Mixins
+@import 'mixins.scss';
+
+
+// General Styles
+
+html {
+  font-size: 12px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 14px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+  }
+}
+
+a[target="_blank"] {
+  
+  &:hover {
+    @include media-breakpoint-up(md) {
+      @include external-link-icon;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    @include external-link-icon;
+  }
+}

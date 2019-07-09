@@ -1,0 +1,19 @@
+<div class="row">
+  <ng-container
+    *ngIf="(users$ | async) && (users$ | async).length">
+    <div
+      class="col-12 col-sm-6 col-md-4 mb-4"
+      *ngFor="let user of users$ | async">
+      <app-user-card
+        [user]="user">
+      </app-user-card>
+    </div>
+  </ng-container>
+
+  <!-- No Result -->
+  <div
+    *ngIf="!(users$ | async) || !(users$ | async).length"
+    class="col">
+    <app-no-results></app-no-results>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="card shadow-sm">
+  <!-- Header -->
+  <div class="card-header bg-warning"></div>
+  
+  <!-- Body -->
+  <div class="card-body text-center">
+    <span class="avatar fa-stack fa-2x">
+      <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+      <i class="fas fa-user-circle fa-stack-2x"></i>
+    </span>
+
+    <h5 class="card-title">{{ user.name }}</h5>
+
+    <div class="text-left">
+      <p class="card-text">
+        <small>
+          <i class="fas fa-envelope mr-1"></i>
+          <a [href]="user.email | mailto">{{ user.email }}</a></small>
+        </p>
+      <p class="card-text">
+        <small>
+          <i class="fas fa-map-marker-alt mr-1"></i>
+          <a [href]="user.address.geo | gmapsGeoLink" target="_blank">{{ user.address | address }}</a>
+        </small>
+      </p>
+      <p class="card-text">
+        <small>
+          <i class="fas fa-laptop mr-1"></i>
+          <a [href]="user.website | sanitizeUrl" target="_blank">{{ user.website }}</a>
+        </small>
+      </p>
+    </div>
+  </div>
+</div>

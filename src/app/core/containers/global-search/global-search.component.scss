@@ -1,0 +1,13 @@
+@import 'bootstrap.scss';
+
+.search {
+  width: 150px;
+  transition: width 200ms ease;
+
+  &--focused {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      width: 400px;
+    }
+  }
+}
